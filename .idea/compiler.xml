@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="test" />
+        <module name="socialContactGateway" />
+        <module name="socialContactcommon" />
+        <module name="socialContactBackStage" />
+        <module name="socialContactBase" />
+        <module name="socialContantQAn" />
+        <module name="socialContactRecruit" />
+        <module name="socialContactQA" />
+        <module name="socialUser" />
+        <module name="socialContactArticle" />
+        <module name="socialContactEureka" />
+        <module name="socialArticle" />
+        <module name="socialGathering" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="socialArticle" target="1.8" />
+      <module name="socialContactGathering" target="1.8" />
+      <module name="socialContantQAn" target="1.8" />
+      <module name="Test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SocialContact" options="-parameters" />
+      <module name="Test" options="-parameters" />
+      <module name="socialArticle" options="-parameters" />
+      <module name="socialContactArticle" options="-parameters" />
+      <module name="socialContactBackStage" options="-parameters" />
+      <module name="socialContactBase" options="-parameters" />
+      <module name="socialContactEureka" options="-parameters" />
+      <module name="socialContactGateway" options="-parameters" />
+      <module name="socialContactGathering" options="-parameters" />
+      <module name="socialContactQA" options="-parameters" />
+      <module name="socialContactRecruit" options="-parameters" />
+      <module name="socialContactcommon" options="-parameters" />
+      <module name="socialContantQAn" options="-parameters" />
+      <module name="socialGathering" options="-parameters" />
+      <module name="socialUser" options="-parameters" />
+      <module name="test" options="-parameters" />
+    </option>
+  </component>
+</project>
