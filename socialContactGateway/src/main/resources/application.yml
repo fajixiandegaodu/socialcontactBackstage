@@ -1,0 +1,40 @@
+server:
+  port: 9088
+spring:
+  application:
+    name: socialContact-gateway
+  cloud:
+    gateway:
+      routes:
+        # 路由id，可以任意
+        - id: socialContact-gathering
+          #lb表示从eureka中获取具体的服务
+          uri: http://127.0.0.1:9005 #http://127.0.0.1:8088
+          #路由断言，可以配置映射路径
+          predicates:
+            #去除前缀 - Path=/api/user/** 这里的请求路径应该设置为未去除前缀之前的路径
+            - Path=/gathering/**
+        - id: socialContact-article
+            #lb表示从eureka中获取具体的服务
+          uri: http://127.0.0.1:9004 #http://127.0.0.1:8088
+            #路由断言，可以配置映射路径
+          predicates:
+              #去除前缀 - Path=/api/user/** 这里的请求路径应该设置为未去除前缀之前的路径
+            - Path=/article/**
+        - id: socialContact-user
+          #lb表示从eureka中获取具体的服务
+          uri: http://127.0.0.1:9006 #http://127.0.0.1:8088
+          #路由断言，可以配置映射路径
+          predicates:
+            #去除前缀 - Path=/api/user/** 这里的请求路径应该设置为未去除前缀之前的路径
+            - Path=/user/**
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+
